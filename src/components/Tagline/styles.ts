@@ -9,7 +9,7 @@ export const Container = styled.div`
   justify-content: center;
 
   h2 {
-      font-size: 12px;
+      font-size: 15px;
       color: #fff;
   }
 `;

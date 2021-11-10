@@ -8,8 +8,14 @@ export const Benefits = styled.div`
 
 export const ImageWrapper = styled.div`
     width: 50%;
-    background: yellow;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width: 80%;
+    }
 `;
 export const BenefitsWrapper = styled.div`
     width: 50%;

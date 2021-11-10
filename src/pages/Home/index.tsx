@@ -3,8 +3,10 @@ import { Header } from '../../components/Header';
 import { Tagline } from '../../components/Tagline';
 
 import Success from "../../assets/success.png";
+import People from "../../assets/people.svg";
 
-import { Benefits, BenefitsWrapper, ImageWrapper,BenefitItem } from './styles';
+import { Benefits, BenefitsWrapper, ImageWrapper, BenefitItem } from './styles';
+import { Footer } from '../../components/Footer';
 
 function Home() {
     return (
@@ -13,7 +15,9 @@ function Home() {
             <Tagline />
             <Banner />
             <Benefits>
-                <ImageWrapper />
+                <ImageWrapper>
+                    <img src={People} alt="Reciclagem" />
+                </ImageWrapper>
                 <BenefitsWrapper>
                     <h1>Benefícios da reciclagem</h1>
 
@@ -38,6 +42,7 @@ function Home() {
                     </BenefitItem>
                 </BenefitsWrapper>
             </Benefits>
+            <Footer />
         </>
     )
 }
