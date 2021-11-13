@@ -9,7 +9,7 @@ export const Content = styled.main`
 `;
 export const Aside = styled.aside`
   min-height: 91vh;
-  width: 15vw;
+  width: 18vw;
   background: #000;
   display: flex;
   flex-direction: column;
