@@ -1,11 +1,11 @@
 import GlobalStyle from "./styles/global";
-import { App as AppPage } from "./pages/App";
+import { RouterAPP } from "./routes";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <AppPage />
+      <RouterAPP />
     </>
   );
 }
