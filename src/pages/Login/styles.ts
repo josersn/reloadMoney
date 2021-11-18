@@ -4,15 +4,15 @@ interface MenuOptionProps {
     selected?: boolean
 }
 
-export const Container = styled.div
+export const Container = styled.div`
     width:80vw;
     height: 80vh;
     margin: 4.5% auto;
     background-color: #000;
     border-radius: 12px;
-;
+`;
 
-export const Content = styled.div
+export const Content = styled.div`
   width: 50%;
   height: 100%;
   border-radius: 12px;
@@ -23,9 +23,9 @@ export const Content = styled.div
       display: flex;
   }
 
-;
+`;
 
-export const MenuOption = styled.span<MenuOptionProps>
+export const MenuOption = styled.span<MenuOptionProps>`
     width: 50%;
     text-align: center;
     margin-top: 30px;
@@ -33,9 +33,9 @@ export const MenuOption = styled.span<MenuOptionProps>
     padding: 0 0 8px 0;
     font-weight: bold;
     border-bottom: 3px solid ${({ selected }) => selected ? '#00B969' : '#000'};
-;
+`;
 
-export const Image = styled.div
+export const Image = styled.div`
   width: 50%;
   height: 100%;
-;
+`;
