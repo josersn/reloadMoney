@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { 
+import {
     Container,
     Content,
     Image,
     MenuOption
 } from "./styles";
+
+import Logo from "../../assets/logo.png"
 
 function Login() {
 
@@ -14,11 +16,27 @@ function Login() {
         <Container>
             <Content>
                 <header>
-                    <MenuOption selected={isLogin} >Login</MenuOption>
-                    <MenuOption selected={!isLogin}>Cadastro</MenuOption>
+                    <MenuOption selected={isLogin} onClick={() => setIsLogin(true)}>Login</MenuOption>
+                    <MenuOption selected={!isLogin} onClick={() => setIsLogin(false)} >Cadastro</MenuOption>
                 </header>
+                {isLogin ? (
+                    <form>
+                        <input type="text" name="mail" id="mail" placeholder="E-mail" />
+                        <input type="password" name="password" id="password" placeholder="Senha" />
+                        <button>Entrar</button>
+                    </form>
+                ) : (
+                    <form>
+                        <input type="text" name="name" id="name" placeholder="nome" />
+                        <input type="text" name="mail" id="mail" placeholder="E-mail" />
+                        <input type="password" name="password" id="password" placeholder="Senha" />
+                        <button>Registrar</button>
+                    </form>
+                )}
             </Content>
-            <Image></Image>
+            <Image>
+                <img src={Logo} alt="Reload Money" />
+            </Image>
         </Container>
     )
 }
