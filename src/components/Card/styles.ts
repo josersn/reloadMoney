@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 280px;
-  width: 420px;
-  background-color: #cecece;
+  height: 120px;
+  width: 100;
+  border: solid 1px #000;
   border-radius: 12px;
-  
+  margin: 0 10px;
   img {
-    height: 280px;
-    border-radius: 12px;
-    width: 420px;
+    height: inherit;
+    width: 100%;
+    border-radius: inherit;
   }
 `;

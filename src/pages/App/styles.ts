@@ -7,14 +7,17 @@ export const Content = styled.main`
   height: 91vh;
   display: flex;
 `;
+
 export const Aside = styled.aside`
   min-height: 91vh;
-  width: 18vw;
+  width: 20vw;
   background: #000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+  position: fixed ;
+  margin-top: 9vh;
+
   h1 {
       color: #fff;
       text-align: center;
@@ -23,32 +26,34 @@ export const Aside = styled.aside`
 `;
 
 export const Main = styled.div`
+  margin-top: 9vh;
   min-height: 91vh;
-  width: 82vw;
-  
+  width: 80vw;
+  margin-left: 20vw;
+  padding: 20px;
   h1 {
       margin: 20px 30px;
   }
 `;
 
 export const Wrapper = styled.div`
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-`
+    justify-content: flex-start;
+    
+`;
 
 export const Profile = styled.div`
-    width: 85%;
+    width: 220px;
     margin: 0 auto;
-    background: white;
-    height: 260px;
+    height: 220px;
     border-radius: 50%;
 
     img{ 
-        width: 100%;
-        height: 260px;
-        border-radius: 50%;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
     }
 `;
 
@@ -68,7 +73,7 @@ export const Menu = styled.div`
     .selected {
         border-bottom: 3px solid #00B969;
     }
-`
+`;
 
 export const HelperButton = styled.a`
     color: #00B969;

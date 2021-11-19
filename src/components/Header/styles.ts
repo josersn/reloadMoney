@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const Container = styled.div`
     height: 9vh;
     background: #000;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
 `;
 
 export const Content = styled.div `
