@@ -38,7 +38,7 @@ function Login() {
                     </form>
                 ) : (
                     <form>
-                        <input type="text" name="name" id="name" placeholder="nome" />
+                        <input type="text" name="name" id="name" placeholder="Nome" />
                         <input type="text" name="mail" id="mail" placeholder="E-mail" />
                         <input type="password" name="password" id="password" placeholder="Senha" />
                         <button>Registrar</button>

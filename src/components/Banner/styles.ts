@@ -57,7 +57,7 @@ export const OffPrice = styled.div`
   justify-content: center;
   border-radius: 50%;
   position: absolute;
-  right: -20%;
+  right: -15%;
   top: 15%;
   span {
       color: #fff;

@@ -26,13 +26,14 @@ export const Content = styled.div`
 
   form {
     width: 80%;
-    margin: 120px auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
 
     input {
-      margin: 20px 0;
-      padding: 1.3em 1em;
+      margin: 10px 0;
+      padding: 1em 1em;
+      font-size: 1rem;
     }
 
     button {
