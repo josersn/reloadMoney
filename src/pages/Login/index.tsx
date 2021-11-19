@@ -7,10 +7,21 @@ import {
 } from "./styles";
 
 import Logo from "../../assets/logo.png"
+import { instance } from "../../service/api";
 
 function Login() {
 
     const [isLogin, setIsLogin] = useState(true);
+
+    async function handleLogin() {
+
+        const data = {}
+        const login = await instance.post("salvar", data);
+
+        if(login) {
+            
+        }
+    }
 
     return (
         <Container>
@@ -23,7 +34,7 @@ function Login() {
                     <form>
                         <input type="text" name="mail" id="mail" placeholder="E-mail" />
                         <input type="password" name="password" id="password" placeholder="Senha" />
-                        <button>Entrar</button>
+                        <button onClick={() => handleLogin()}>Entrar</button>
                     </form>
                 ) : (
                     <form>

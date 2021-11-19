@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png"
 
 import { Button, Container, Content, Menu } from './styles';
@@ -20,9 +21,11 @@ function Header({ login = false }: HeaderProps) {
                             <a href="/">Trocar pontos</a>
                         </Menu>
                     )}
-                    <Button>
-                        {login ? "SAIR" : "ENTRAR"}
-                    </Button>
+                    <Link to={login ? "/" : "/login"}>
+                        <Button >
+                            {login ? "SAIR" : "ENTRAR"}
+                        </Button>
+                    </Link>
                 </div>
             </Content>
         </Container>
