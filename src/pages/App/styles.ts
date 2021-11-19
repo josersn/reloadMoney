@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  
-`;
+export const Container = styled.div``;
+
 export const Content = styled.main`
   width: 100%;
   height: 91vh;
+  display: flex;
 `;
 export const Aside = styled.aside`
   min-height: 91vh;
@@ -22,16 +22,32 @@ export const Aside = styled.aside`
   }
 `;
 
+export const Main = styled.div`
+  min-height: 91vh;
+  width: 82vw;
+  
+  h1 {
+      margin: 20px 30px;
+  }
+`;
+
+export const Wrapper = styled.div`
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+`
+
 export const Profile = styled.div`
     width: 85%;
     margin: 0 auto;
     background: white;
-    height: 210px;
+    height: 260px;
     border-radius: 50%;
 
     img{ 
         width: 100%;
-        height: 210px;
+        height: 260px;
         border-radius: 50%;
     }
 `;

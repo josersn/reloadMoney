@@ -1,10 +1,12 @@
-import { useState } from "react";
 import Logo from "../../assets/logo.png"
 
 import { Button, Container, Content, Menu } from './styles';
 
-function Header() {
-    const [login, setLogin] = useState(true);
+interface HeaderProps {
+    login?: boolean
+}
+
+function Header({ login = false }: HeaderProps) {
 
     return (
         <Container>

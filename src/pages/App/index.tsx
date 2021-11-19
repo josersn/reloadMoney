@@ -1,4 +1,6 @@
+import { Card } from '../../components/Card';
 import { Header } from '../../components/Header';
+import { Heading } from '../../components/Heading';
 import { ProgressBar } from '../../components/ProgressBar';
 
 import {
@@ -7,13 +9,15 @@ import {
     Aside,
     Profile,
     Menu,
-    HelperButton
+    HelperButton,
+    Main,
+    Wrapper
 } from './styles';
 
 export function App() {
     return (
         <Container>
-            <Header />
+            <Header login={true} />
             <Content>
                 <Aside>
                     <div>
@@ -32,6 +36,21 @@ export function App() {
                     </div>
                     <HelperButton>Precisa de Ajuda ?</HelperButton>
                 </Aside>
+                <Main>
+                    <Heading title="Resgatar Pontos" />
+                    <Wrapper>
+                        <Card image="/ifood.jpg" />
+                        <Card image="/spotify.png" />
+                        <Card image="/mcdonalds.jpg" />
+                    </Wrapper>
+
+                    <Heading title="Doar Pontos" />
+                    <Wrapper>
+                        <Card image="/sos.jpg" />
+                        <Card image="/socio.jpg" />
+                        <Card image="/baca.jpg" />
+                    </Wrapper>
+                </Main>
             </Content>
         </Container>
     )
