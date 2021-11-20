@@ -7,7 +7,7 @@ import {
 import { Home } from "./pages/Home";
 import { App } from "./pages/App";
 import { Login } from "./pages/Login";
-
+import { Users } from "./pages/Users";
 
 function RouterAPP() {
     return (
@@ -16,6 +16,7 @@ function RouterAPP() {
                 <Route path="/" element={<Home />} />
                 <Route path="/app" element={<App />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/users" element={<Users />} />
             </Routes>
         </BrowserRouter>
     )
