@@ -7,6 +7,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 6vh;
 `;
 
 export const TextWrapper = styled.div`
