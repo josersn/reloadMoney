@@ -1,7 +1,7 @@
 import {
     BrowserRouter,
     Route,
-    Routes
+    Switch as Routes
 } from "react-router-dom";
 
 import { Home } from "./pages/Home";
@@ -13,10 +13,10 @@ function RouterAPP() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/app" element={<App />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/users" element={<Users />} />
+                <Route path="/" exact component={Home} />
+                <Route path="/app" component={App} />
+                <Route path="/login" component={Login} />
+                <Route path="/users" component={Users} />
             </Routes>
         </BrowserRouter>
     )
