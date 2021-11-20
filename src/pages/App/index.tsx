@@ -1,7 +1,9 @@
+import { useEffect, useState } from 'react';
 import { Card } from '../../components/Card';
 import { Header } from '../../components/Header';
 import { Heading } from '../../components/Heading';
 import { ProgressBar } from '../../components/ProgressBar';
+import { instance } from '../../service/api';
 
 import {
     Container,
@@ -15,6 +17,21 @@ import {
 } from './styles';
 
 export function App() {
+
+    const [user, setUser] = useState({
+        nome: ""
+    });
+
+    async function getUser(user: any) {
+        const res = await instance.get(`usuarios/listar/${user}`);
+
+        setUser(res.data);
+    }
+    useEffect(() =>  {
+        const params = new URLSearchParams(window.location.search)
+        getUser(params.get("user"))
+    }, []);
+
     return (
         <Container>
             <Header login={true} />
@@ -24,7 +41,7 @@ export function App() {
                         <Profile>
                             <img src="https://www.marciapiovesan.com.br/wp-content/uploads/2021/01/1200x800-11.jpg" alt="Carla Bueno" />
                         </Profile>
-                        <h1>Carla Bueno</h1>
+                        <h1>{user.nome || "Rafael Ronqui"}</h1>
 
                         <ProgressBar />
                         <Menu>
